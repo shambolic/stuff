@@ -13,7 +13,7 @@ var results = process.argv[3] || 100;
 // console.log("Name, Number, Age Group, Distance, Time")
 var getPage = function(stem) {
 
-	request(baseURL + stem, function(err, resp, html) // , CAllBACK?
+	request(baseURL + stem, function(err, resp, html) // promise Q.request().then.parsedResults.push() ?
 		{
 			if (err) return console.log("error is: " + err);
 			var $ = cheerio.load(html);

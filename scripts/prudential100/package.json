@@ -1,0 +1,14 @@
+{
+  "name": "Prudential 100 scraper",
+  "description": "script to pull date from the Prudential site",
+  "author": "Jay Johnston <jay.johnston@gmail.com>",
+  "dependencies": {
+    "cheerio": " 0.19.x",
+	"request": "2.60.x",
+    "q": "1.4.x",
+    "json-2-csv": "1.3.x"
+  },
+  
+  },
+  "engine": "node >= 0.12.7"
+}
