@@ -1,4 +1,4 @@
-//  script for mick to scrape the prudentail site
+//  script for mick to scrape the prudentail 100 site
 //  10-8-15
 
 var cheerio = require('cheerio');
@@ -9,15 +9,17 @@ var q = require('q');
 var baseURL = 'http://results.prudentialridelondon.co.uk/2015/';
 var gender = process.argv[2] || "";
 var results = process.argv[3] || 100;
+var parsedResults = [];
 
 // console.log("Name, Number, Age Group, Distance, Time")
 var getPage = function(stem) {
+	
+	var deferred = q.defer();
 
 	request(baseURL + stem, function(err, resp, html) // promise Q.request().then.parsedResults.push() ?
 		{
 			if (err) return console.log("error is: " + err);
 			var $ = cheerio.load(html);
-			var parsedResults = [];
 			$('tbody').children().each(function(i, element) {
 				var anchor = $(this).children().first();
 				var number = anchor.text();
@@ -35,19 +37,29 @@ var getPage = function(stem) {
 				};
 
 				parsedResults.push(metadata);
-				console.log(Name + "," + number + ", " + AG + "," + distance + "," + time);
+				// stream to fs. using some sort of csv writer.
+				//console.log(Name + "," + number + ", " + AG + "," + distance + "," + time);
+				deferred.resolve();
 			});
 			// console.log(parsedResults)
 			// return parsedResults
 		});
+		
+	return deferred.promise;
 };
 
 function getAllPages() {
+	var promises = [];
+	
 	for (i = 1; i < 207; ++i) {
 		var s = "?page=" + i + "&num_results=100&pid=search&search[sex]=M%25&search[nation]=%25&search_sort=name";
 		// console.log(s)
-		getPage(s);
+		promises.push(getPage(s));
 	};
+	
+	q.all(promises).then(function() {
+		console.log("Got:", parsedResults.length, "records");
+	});
 };
 
 function convertCSV(json) {
