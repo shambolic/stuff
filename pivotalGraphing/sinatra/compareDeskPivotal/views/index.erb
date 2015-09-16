@@ -1,0 +1,81 @@
+<div class="hero-unit">
+<div id="selectors">
+<ul>
+<li><strong>Start Date: </strong> <%= @startDate %></li>
+<li><strong>End Date: </strong> <%= @endDate %></li>
+<li><strong>State: </strong> <%= @state %> </li>
+<li><strong>Project ID: </strong> <%= @projectID %></li>
+</ul>
+
+Select Project: <select id ="id">
+        <option value = '1023974' selected='selected'>Unified Backlog</option>
+        <option value = '926050'>Casting</option>
+        <option value = '699759'>Support Dev</option>
+        <option value = '691571'>Ops</option>
+        <option value = '590093'>Feature</option>
+		<option value = '549251'>Platform</option>
+		<option value = '811993'>Tech Debt</option>
+    <option value = 'all'>All</option>
+		</select>
+Select Start Date: <input  type="text" placeholder="click to show datepicker"  id="startdate" data-date-format="yyyy-mm-dd">
+Select End Date: <input  type="text" placeholder="click to show datepicker"  id="enddate" data-date-format="yyyy-mm-dd">
+Select State:   <select id="state">
+                <option value ='accepted' selected='selected'>Accepted</option>
+                <option value ='delivered'>Delivered</option>
+                <option value ='finished'>Finished</option>
+                <option value = 'started'>Started</option>
+                <option value = 'rejected'>Rejected</option>
+                <option value = 'unstarted'>Unstarted</option>
+                <option value = 'unscheduled'>Unscheduled</option>
+              </select>
+<br /><br />
+<button>Submit</button>
+	        </div>
+</div>
+<h3>project ids:</h3> <%= @ids %>
+<h3>number of stories:</h3> <%= @numStories %>
+<h3>number of points:</h3> <%= @points %>
+<h3>points per story:</h3> <%= @average.round(3) %>
+<h3>stories:</h3>
+<ul>
+	<% @stories.each do |s| %>
+<li>
+	<a href="<%= s["url"] %>"><%=s["name"]%></a>
+</li>
+<% end %>
+</ul>
+</div>   <!-- end of First Tab -->
+
+<!-- Date Pickers	 -->
+ <script type="text/javascript">
+
+ var start = "<%= @startDate %>";
+ var end = "<%= @endDate %>";
+ var state = "accepted";
+ var id = 1023974;
+
+ $(document).ready(function () {
+	 $('#startdate').datepicker().on('changeDate', function (){
+		start = $('#startdate').val();
+	});
+
+	$('#enddate').datepicker().on('changeDate', function(){
+		end = $('#enddate').val();
+	});
+	$('#state').change(function(){
+		state = $(this).val();
+	});
+	$('#id').change(function(){
+		id =  $(this).val();
+		// console.log(id);
+	});
+
+	// build query params and redirect
+$("button").click(function() {
+	var query =  "?start=" + start + "T00:00:00Z"+"&end=" + end + "T00:00:00Z" + "&state=" + state + "&id=" + id;
+	console.log(query)
+  window.location.href=query;
+	});
+});
+
+ </script>

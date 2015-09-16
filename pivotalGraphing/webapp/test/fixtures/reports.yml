@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyText
+  fromDate: 2014-02-20
+  toDate: 2014-02-20
+  datetime: 2014-02-20 17:54:26
+  state: MyString
+
+two:
+  description: MyText
+  fromDate: 2014-02-20
+  toDate: 2014-02-20
+  datetime: 2014-02-20 17:54:26
+  state: MyString

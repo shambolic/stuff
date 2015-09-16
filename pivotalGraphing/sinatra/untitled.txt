@@ -1,0 +1,16 @@
+[
+	{
+	date: fileDate, 
+	currentState:  current_state,
+	points: estimate
+	},
+	{
+	day: fileDate, 
+	currentState:  current_stage,
+	points: estimate
+	},
+]
+
+
+to graph by date
+* [date.each, currentState.count, points.sum]

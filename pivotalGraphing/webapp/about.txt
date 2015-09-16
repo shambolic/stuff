@@ -1,0 +1,15 @@
+About your application's environment
+Ruby version              2.0.0 (x86_64-darwin12.4.0)
+RubyGems version          2.0.3
+Rack version              1.5
+Rails version             4.0.0
+JavaScript Runtime        Node.js (V8)
+Active Record version     4.0.0
+Action Pack version       4.0.0
+Action Mailer version     4.0.0
+Active Support version    4.0.0
+Middleware                ActionDispatch::Static, Rack::Lock, #<ActiveSupport::Cache::Strategy::LocalCache::Middleware:0x007fe3ed0a6378>, Rack::Runtime, Rack::MethodOverride, ActionDispatch::RequestId, Rails::Rack::Logger, ActionDispatch::ShowExceptions, ActionDispatch::DebugExceptions, ActionDispatch::RemoteIp, ActionDispatch::Reloader, ActionDispatch::Callbacks, ActiveRecord::Migration::CheckPending, ActiveRecord::ConnectionAdapters::ConnectionManagement, ActiveRecord::QueryCache, ActionDispatch::Cookies, ActionDispatch::Session::CookieStore, ActionDispatch::Flash, ActionDispatch::ParamsParser, Rack::Head, Rack::ConditionalGet, Rack::ETag
+Application root          /Volumes/Work/spotlight/pivotalGraphing/webapp
+Environment               development
+Database adapter          sqlite3
+Database schema version   0
