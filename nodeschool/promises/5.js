@@ -17,7 +17,7 @@ function attachTitle(name){
 }
 
 deferred.promise 
-.then(attachTitle) //promise
+.then(attachTitle) // use .then when you're going to do something with the result.
 .then(console.log); // value
 
 deferred.resolve("MANHATTAN"); // (fulfillment handler, rejection handler)
