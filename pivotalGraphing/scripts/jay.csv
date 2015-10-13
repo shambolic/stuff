@@ -1,9 +1,0 @@
-Id,Story,Labels,Iteration,Iteration Start,Iteration End,Story Type,Estimate,Current State,Created at,Accepted at,Deadline,Requested By,Description,URL,Owned By,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status
-65631094,As a casting professional I want to be able to playback the clip from the carousel on a running list or to view the attachment ,"",,,,feature,8,unstarted,"Feb 12, 2014",,,Maryia Shalimava,"As soon as performer was added to a running list, a carousel is available when his slot is expanded.
-
-If any attachments or clips were added, they are available in a carousel.
-
-By click on attachment, a view window opens and user can view the attachment
-
-By click on clip, a view window opens and user can playback the clip",https://www.pivotaltracker.com/story/show/65631094,
-65357962,"As Spotlight, I want to have play clip dialog every places clips are (related to #61406386 and #65630730)",web-app,,,,feature,8,unstarted,"Feb 7, 2014",,,Oleksandr Lutsyk,,https://www.pivotaltracker.com/story/show/65357962,Alina
