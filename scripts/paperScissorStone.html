@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Paper Scissor Stone</title>
+  <style> 
+  * {font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;}
+  </style>
+<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script tye="text/javascrip">
+  function root(){
+    var beats = {
+      "rock":"scissors",
+      "paper" : "rock",
+      "scissors": "paper"
+    };
+    var scores = [0,0,0] // computer, human, tie
+    var plays = [0,0,0] // rock, paper, scissors.
+     
+
+    function computerPlays(){
+      
+    }
+    function humanPlays(){}
+    
+    
+  }
+  function play(param){
+  console.log(param)
+    // ask to pick an item (driop down menu?)
+    // computer plays
+    //update scores
+  };
+  
+ $(document).ready(function(){ 
+   $("input[name='rdio']").click(function(){
+     if ($("input[name='rdio']:checked").val()== 'rock')
+       play("rock");
+     else if ($("input[name='rdio']:checked").val()== 'paper')
+       play("paper");
+     else if ($("input[name='rdio']:checked").val()== 'scissors')
+       play("scissors");
+   })  
+ });
+  
+  </script>  
+  
+ 
+</head>
+<body>
+  <h1>Rock, Paper, Scissors game! </h1>
+    
+    <p>select one of the following: </p>
+    <form>
+      <input type="radio" name ="rdio"value="rock">Rock<br>
+      <input type="radio" name ="rdio" value="paper">Paper<br>
+      <input type="radio" name ="rdio" value="scissors">Scissors
+    </form>
+    <div id="results"></div>
+</body>
+</html>
+
