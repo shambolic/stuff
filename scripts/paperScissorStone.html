@@ -12,38 +12,37 @@
   </style>
 <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 <script type="text/javascript">
-      
-      
 var root ={};
     root.beats = {
       "rock":"scissors",
       "paper" : "rock",
-      "scissors": "paper"
-    };
+      "scissors": "paper" };
     root.scores = [0,0,0] // computer, human, tie
     root.plays = [0,0,0] // rock, paper, scissors.
     root.options = ["rock","paper","scissors"] 
     // select graphic based on paraqmeter and update relevant html
+  
     function returnPic (who, selection, span) {
       if (selection == "rock") {
         $(span).html(who + "picked: " + rockPic + "</br>")
       } else if  (selection =="paper"){
         $(span).html(who + "picked: " + paperPic + "</br>")
       } else {
-        $(span).html(who + "picked: " + scissorPic + "</br>")
-      };
+        $(span).html(who + "picked: " + scissorPic + "</br>") };
     }
-    function humanPlay(param){
-      $('#results').empty();   
-      returnPic ("You ", param , "#results") 
-      setTimeout(function(){computerPlays(param)}, 1000);
+    function humanPlay(human){
+      returnPic ("You ", human , "#results") 
+      setTimeout(function(){computerPlays(human)}, 1000);
     }
      
-    function computerPlays(param){
-      // random select from root.beats.
+    function computerPlays(human){
+      // random select from root.options
       var computer = root.options[Math.floor(Math.random() * root.options.length)];
-      returnPic("Computer ", computer, "#computer")
-     // $('#computer').html("computer picked: " + computer);
+      returnPic("Computer ", computer, "#computer");
+      updateScores(human, computer)
+    }
+    function updateScores(human, computer) {
+      $('#scores').html("human " + human + "<br/>computer " + computer)
     }
  $(document).ready(function(){ 
    $("input[name='rdio']").click(function(){
@@ -55,7 +54,6 @@ var root ={};
        humanPlay("scissors");
    })  
  });
-
   </script>    
 </head>
 <body>
