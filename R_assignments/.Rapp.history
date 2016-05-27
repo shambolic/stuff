@@ -1,0 +1,99 @@
+x <- read.csv(file="hw1_data.csv")
+x[Ozone(NA)]
+x[Ozone]
+x[[Ozone]]
+x
+x$Ozone
+x$Ozone==NA
+x
+x[names(Ozone)==NA]
+y <-x[[Ozone]]
+y <-x$Ozone
+y
+length(which(y==NA))
+lengthwhichis.na(y)
+length(is.na(y))
+is.na(y)
+is.na(y)[[TRUE]]
+is.na(y)$true
+is.na(y)$TRUE
+is.na(y)
+length(y=NA)
+?length
+y
+y==NA
+y
+y=NA
+y
+y <-x[[Ozone]]
+y <-x$Ozone
+y
+z<-is.na(y)
+z
+length(z)
+length(which(z=TRUE))
+length(which(z='TRUE'))
+length(which(z==TRUE))
+y
+length(which(y==NA))
+length(which(y=="NA"))
+length(which(is.na(y)))
+y
+complete.cases(y)
+?!
+y
+z <- complete.cases(y)[y]
+z
+y
+z <- y[complete.cases(y)]
+z
+mean(z)
+x
+z <- x[Ozone]
+x[[Ozone]]
+x
+x[Ozone]
+x[["Ozone"]]
+x
+z <- x[which (x$Ozone>31 & x$Temp>90)]
+x[which(x$Ozone > 31)]
+x
+x$Ozone
+x(x$Ozone > 31]
+x[x$Ozone > 31]
+x[which(x$Ozone)]
+x[which(x$Ozone > 31)]
+x[which(x$Ozone > 31),]
+x[which(x$Ozone > 31 & Temp > 90),]
+x[which(x$Ozone > 31 & x$Temp > 90),]
+mean(x[which(x$Ozone > 31 & x$Temp > 90),])
+x[which(x$Ozone > 31 & x$Temp > 90),]
+z <- x[which(x$Ozone > 31 & x$Temp > 90),]
+z
+z$Solar.R
+mean(z$Solar.R)
+x
+19 <- x[which(x$Month == 6),]
+j <- x[which(x$Month == 6),]
+j
+mean (j$Temp)
+j$Temp
+length(j$Temp)
+x
+may <- x[]
+may <- x[which(x$Month == 5),]
+may
+? max
+max(may$Ozone)
+may$Ozone
+c <- may$Ozone
+c
+max(x)
+max(c)
+c
+qq <- max(c)
+qq
+qq <- max(c, na.rm=TRUE)
+qq
+max(c, na.rm=T
+max(c, na.rm=TRUE)
